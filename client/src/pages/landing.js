@@ -37,7 +37,7 @@ export default function Landing() {
   };
   return (
     <Container fluid className="text-center" style={backgroundStyle}>
-      <Row style={{paddingTop: "200px"}}>
+      <Row style={{paddingTop: "300px"}}>
         <Col xs={12}>
           <h1 className="">Connect Kids</h1>
         </Col>
@@ -55,7 +55,7 @@ export default function Landing() {
         </Col>
       </Row> */}
 
-      <Row style={{paddingBottom: "200px"}}>
+      <Row style={{paddingBottom: "400px"}}>
         <Col>
           <p>Connect your kids through our events!</p>
         </Col>

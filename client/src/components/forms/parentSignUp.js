@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {CREATE_PARENT} from "../../utils/apollo/mutations";
 import { useMutation } from "@apollo/client";
 import AuthService from "../../utils/Auth";
-import { Form, Row, Col, Button } from "react-bootstrap";
+import { Form, Row, Col, Button, InputGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import joinImage from "../../assets/images/join.jpg"
 const ParentSignUp = () => {
@@ -14,6 +14,8 @@ const ParentSignUp = () => {
         password: "",
         age: ""
     });
+
+    const [validated, setValidated] = useState(false)
 
     const [createParent] = useMutation(CREATE_PARENT);
 
@@ -36,9 +38,14 @@ const ParentSignUp = () => {
     const onSubmit = async (e) => {
     //     // apollo query
 
+
         e.preventDefault();
+
     //     // createParent({variables: {signupForm}})
         // const result = useMutation(CREATE_PARENT, {variables: {firstName: signupForm.firstName}});
+
+
+
 
         const { data } = await createParent({
             variables: {firstName: signupForm.firstName, lastName: signupForm.lastName, email: signupForm.email,
@@ -64,7 +71,9 @@ const ParentSignUp = () => {
             </Row>
         <Row style={{height: "100%", overflow: "hidden"}} className="align-items-center">
         <Col xs={11} xl={6} className="mx-auto" style={{marginTop: "75px"}}>
-        <Form className="border shadow p-3 bg-light" onSubmit={onSubmit}>
+
+
+        <Form noValidate validated={validated} className="border shadow p-3 bg-light" onSubmit={onSubmit}>
             <Row>
             <Col>
                 <Form.Group className="mb-3" controlId="firstName">
@@ -87,7 +96,12 @@ const ParentSignUp = () => {
 
             <Form.Group className="mb-3" controlId="password">
                 <Form.Label>Password: </Form.Label>
+                <InputGroup hasValidation>
                 <Form.Control type="password" placeholder="password" onChange={onChange} />
+                <Form.Control.Feedback type="invalid">
+                    Please enter a valid password
+                </Form.Control.Feedback>
+                </InputGroup>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="age">
