@@ -7,7 +7,7 @@
     "develop": "concurrently \"cd server && node server.js \" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
+    "build": "cd client && react-scripts --openssl-legacy-provider build"
   },
   "dependencies": {
     "apollo-server-express": "^3.10.3",
