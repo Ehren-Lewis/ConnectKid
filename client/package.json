@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider next build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
