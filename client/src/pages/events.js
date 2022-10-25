@@ -9,6 +9,11 @@ import { Row, Col, Container } from "react-bootstrap";
 import eventBanner from "../assets/images/eventBanner.jpg";
 
 export default function Events({ eventCards, featuredCard }) {
+
+  const token = localStorage.getItem("_id");
+  if (!token) {
+    return <h1 style={{padding: "600px 0", textAlign: "center"}}>Please log in or sign up to view events </h1>
+  }
   const { loading, err, data } = useQuery(ALL_EVENTS);
 
   const styleBackground = {

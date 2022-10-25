@@ -10,7 +10,7 @@ const AboutInformation = () => {
     backgroundImage: `url(${backgroundImage})`,
     // height: "max-content",
     height:"100%",
-    paddingBottom: "50px",
+    paddingBottom: "300px",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat"
   };

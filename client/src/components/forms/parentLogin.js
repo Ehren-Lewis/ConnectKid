@@ -29,7 +29,7 @@ const ParentLogIn = () => {
         backgroundRepeat: "no-repeat",
         height: "100%",
         overflow: "hidden", 
-        paddingBottom: "400px"
+        paddingBottom: "550px"
     }
 
     const onSubmit = async (e) => {
