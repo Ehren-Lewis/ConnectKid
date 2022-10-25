@@ -27,7 +27,7 @@ const ParentSignUp = () => {
         backgroundRepeat: "no-repeat",
         height: "100%",
         overflow: "hidden", 
-        paddingBottom: "300px"
+        paddingBottom: "500px"
     }
 
     const onChange = (e) => {

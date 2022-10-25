@@ -48,7 +48,7 @@ export default function Events({ eventCards, featuredCard }) {
               title={firstFeaturedItem.name}
               date={firstFeaturedItem.date}
               text="Chicken Tacos is our signature event we provide to help get people used to ConnectKids! This event is held on the first Tuedsday night at 7:00pm CT"
-              // locatio needs to be added
+              // location needs to be added
             />
           </Col>
         </Row>

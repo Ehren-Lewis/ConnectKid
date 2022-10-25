@@ -67,7 +67,7 @@ const ParentLogIn = () => {
                 <Form.Control type="email" placeholder="name@email.com" onChange={onChange} />
             </Form.Group>
 
-            <Form.Group classname="mb-3" controlId="password">
+            <Form.Group className="mb-3" controlId="password">
                 <Form.Label>Password: </Form.Label>
                 <Form.Control type="password" placeholder="password" onChange={onChange} />
             </Form.Group>
