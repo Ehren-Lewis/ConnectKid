@@ -10,6 +10,7 @@ const { typeDefs, resolvers } = require("./schemas");
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true
 });
 
 app.use(express.urlencoded({ extended: false }));
