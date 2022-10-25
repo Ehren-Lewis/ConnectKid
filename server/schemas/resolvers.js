@@ -41,9 +41,9 @@ const resolvers = {
         child,
       });
 
-      const id = newParent._id;
+      const _id = newParent._id;
 
-      const token = signToken({ firstName, lastName, id, email });
+      const token = signToken({ firstName, lastName, _id, email });
       return { parent: newParent, token };
     },
     createChild: async (
